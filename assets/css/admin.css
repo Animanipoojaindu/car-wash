@@ -1,0 +1,335 @@
+/* Car Wash Admin Styles */
+
+.carwash-dashboard-stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.carwash-stat-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    min-width: 150px;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.carwash-stat-box h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-number.pending {
+    color: #f56e28;
+}
+
+.stat-number.confirmed {
+    color: #46b450;
+}
+
+.stat-number.completed {
+    color: #00a0d2;
+}
+
+.stat-number.revenue {
+    color: #826eb4;
+}
+
+.carwash-dashboard-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.carwash-recent-bookings,
+.carwash-quick-actions {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.carwash-action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carwash-action-buttons .button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.status-confirmed {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-completed {
+    background: #cce5ff;
+    color: #004085;
+    border: 1px solid #99d6ff;
+}
+
+.status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.status-in_progress {
+    background: #e2e3e5;
+    color: #383d41;
+    border: 1px solid #d6d8db;
+}
+
+.status-active {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-inactive {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Modal Styles */
+.carwash-modal {
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.carwash-modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.carwash-modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+}
+
+.carwash-modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.carwash-modal-close {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+}
+
+.carwash-modal-close:hover {
+    color: #333;
+}
+
+.carwash-modal form {
+    padding: 20px;
+}
+
+.carwash-modal-footer {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+    text-align: right;
+}
+
+.carwash-modal-footer .button {
+    margin-left: 10px;
+}
+
+/* Admin Header */
+.carwash-admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.carwash-admin-header h1 {
+    margin: 0;
+}
+
+/* Form Styles */
+.carwash-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.carwash-form-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.carwash-form-section h3 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carwash-dashboard-stats {
+        flex-direction: column;
+    }
+    
+    .carwash-dashboard-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .carwash-modal-content {
+        width: 95%;
+        margin: 2% auto;
+    }
+    
+    .carwash-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading States */
+.carwash-loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.carwash-loading::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error States */
+.carwash-error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.carwash-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* Table Enhancements */
+.wp-list-table .column-actions {
+    width: 200px;
+}
+
+.wp-list-table .button-small {
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+/* Price Display */
+.price-display {
+    font-weight: bold;
+    color: #46b450;
+}
+
+.price-breakdown {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Booking Status Colors */
+.booking-status-pending {
+    color: #f56e28;
+}
+
+.booking-status-confirmed {
+    color: #46b450;
+}
+
+.booking-status-in-progress {
+    color: #00a0d2;
+}
+
+.booking-status-completed {
+    color: #826eb4;
+}
+
+.booking-status-cancelled {
+    color: #dc3232;
+}
+
